@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { FaUser, FaCode, FaEnvelope } from "react-icons/fa";
 
 export default function NavBar() {
   return (
@@ -9,18 +10,18 @@ export default function NavBar() {
         </Link>
         <ul className="flex space-x-4 text-sm font-medium">
           <li>
-            <a href="#about" className="hover:text-blue-600">
-              About
+            <a href="#about" className="flex items-center hover:text-blue-600">
+              <FaUser className="mr-1" /> About
             </a>
           </li>
           <li>
-            <a href="#projects" className="hover:text-blue-600">
-              Projects
+            <a href="#projects" className="flex items-center hover:text-blue-600">
+              <FaCode className="mr-1" /> Projects
             </a>
           </li>
           <li>
-            <a href="#contact" className="hover:text-blue-600">
-              Contact
+            <a href="#contact" className="flex items-center hover:text-blue-600">
+              <FaEnvelope className="mr-1" /> Contact
             </a>
           </li>
         </ul>

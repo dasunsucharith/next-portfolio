@@ -25,7 +25,7 @@ export default function Hero() {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.2 }}
       >
-        Marketing Automation Developer | SEO Strategist | AI Enthusiast — Building clever, fast, and future-ready web experiences.
+        Marketing Automation Developer | SEO Strategist | AI Enthusiast Building clever, fast, and future-ready web experiences.
       </motion.p>
       <motion.a
         href="#projects"

@@ -8,8 +8,8 @@ export default function Contact() {
       icon: FaEnvelope,
       title: "Email Me",
       description: "Drop me a line directly",
-      value: "dasun@example.com",
-      href: "mailto:dasun@example.com",
+      value: "sucharith.dasun@gmail.com",
+      href: "mailto:sucharith.dasun@gmail.com",
       color: "#5D55F1"
     },
     {
@@ -260,7 +260,7 @@ export default function Contact() {
                 marketing automation, and SEO strategies that actually work.
               </p>
               <motion.a
-                href="mailto:dasun@example.com"
+                href="mailto:sucharith.dasun@gmail.com"
                 className="inline-flex items-center space-x-2 bg-white text-[#5D55F1] px-8 py-4 rounded-full font-semibold hover:bg-gray-50 transition-all duration-300"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}

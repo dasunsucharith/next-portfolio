@@ -149,7 +149,7 @@ export default function ContactForm() {
                   </div>
                   <div>
                     <p className="text-sm text-gray-600">Email</p>
-                    <p className="font-medium text-[#1A1A1A]">dasun@example.com</p>
+                    <p className="font-medium text-[#1A1A1A]">sucharith.dasun@gmail.com</p>
                   </div>
                 </div>
                 <div className="flex items-center space-x-3">
@@ -387,11 +387,11 @@ export default function ContactForm() {
                 Send me an email directly and I&apos;ll respond as soon as possible.
               </p>
               <a
-                href="mailto:dasun@example.com"
+                href="mailto:sucharith.dasun@gmail.com"
                 className="inline-flex items-center space-x-2 bg-white text-[#5D55F1] px-6 py-3 rounded-full font-semibold hover:bg-gray-50 transition-all duration-300"
               >
                 <FaEnvelope className="w-4 h-4" />
-                <span>dasun@example.com</span>
+                <span>sucharith.dasun@gmail.com</span>
               </a>
             </div>
           </div>

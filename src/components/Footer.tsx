@@ -24,7 +24,7 @@ export default function Footer() {
     },
     {
       icon: FaEnvelope,
-      href: "mailto:dasun@example.com",
+      href: "mailto:sucharith.dasun@gmail.com",
       label: "Email",
       color: "#EA4335"
     }

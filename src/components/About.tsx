@@ -152,15 +152,15 @@ export default function About() {
           >
             <div className="bg-gradient-to-br from-gray-900/80 to-black/80 backdrop-blur-lg rounded-2xl p-6 border border-gray-800">
               <p className="text-lg text-gray-300 leading-relaxed mb-4">
-                Hi, I'm <span className="text-[#5D55F1] font-semibold">Dasun Sucharith</span> — a Marketing Automation Developer with a deep love for all things digital. I help businesses grow smarter by blending technology, creativity, and strategy.
+                Hi, I&apos;m <span className="text-[#5D55F1] font-semibold">Dasun Sucharith</span> — a Marketing Automation Developer with a deep love for all things digital. I help businesses grow smarter by blending technology, creativity, and strategy.
               </p>
               
               <p className="text-lg text-gray-300 leading-relaxed mb-4">
-                My background sits at the intersection of <span className="text-[#00C6AE] font-semibold">web development</span>, <span className="text-[#FF5757] font-semibold">marketing</span>, and <span className="text-[#5D55F1] font-semibold">automation</span>. I've spent years designing responsive websites, setting up seamless marketing funnels, and making sure brands rank higher on Google.
+                My background sits at the intersection of <span className="text-[#00C6AE] font-semibold">web development</span>, <span className="text-[#FF5757] font-semibold">marketing</span>, and <span className="text-[#5D55F1] font-semibold">automation</span>. I&apos;ve spent years designing responsive websites, setting up seamless marketing funnels, and making sure brands rank higher on Google.
               </p>
               
               <p className="text-lg text-gray-300 leading-relaxed">
-                Whether I'm coding a new platform, automating lead nurturing campaigns, or refining SEO strategies, my goal is always the same: to make tech work for people, not the other way around.
+                Whether I&apos;m coding a new platform, automating lead nurturing campaigns, or refining SEO strategies, my goal is always the same: to make tech work for people, not the other way around.
               </p>
             </div>
 

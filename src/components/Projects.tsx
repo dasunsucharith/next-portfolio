@@ -1,10 +1,8 @@
 "use client";
 import { motion } from "framer-motion";
-import { FaGithub, FaExternalLinkAlt, FaCode, FaRocket, FaMobile, FaChartLine, FaDatabase, FaPlay } from "react-icons/fa";
-import { useState } from "react";
+import { FaGithub, FaExternalLinkAlt, FaRocket, FaPlay, FaCode } from "react-icons/fa";
 
 export default function Projects() {
-  const [activeProject, setActiveProject] = useState(0);
 
   const projects = [
     {
@@ -202,7 +200,7 @@ export default function Projects() {
           whileInView="visible"
           viewport={{ once: true }}
         >
-          {projects.map((project, index) => (
+          {projects.map((project) => (
             <motion.div
               key={project.id}
               variants={projectVariants}
@@ -211,7 +209,6 @@ export default function Projects() {
                 background: `linear-gradient(135deg, rgba(26, 26, 26, 0.9) 0%, rgba(0, 0, 0, 0.9) 100%)`,
                 backdropFilter: 'blur(10px)'
               }}
-              onMouseEnter={() => setActiveProject(index)}
             >
               {/* Holographic Border Effect */}
               <div 
@@ -333,7 +330,7 @@ export default function Projects() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
           >
-            <span>Let's Build Something Amazing</span>
+            <span>Let&apos;s Build Something Amazing</span>
             <FaRocket className="w-5 h-5" />
           </motion.a>
         </motion.div>

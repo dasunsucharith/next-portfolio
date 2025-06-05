@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import { FaEnvelope, FaLinkedin, FaGithub, FaTwitter, FaArrowRight, FaPaperPlane } from "react-icons/fa";
+import { FaEnvelope, FaLinkedin, FaGithub, FaArrowRight, FaPaperPlane } from "react-icons/fa";
 
 export default function Contact() {
   const contactMethods = [
@@ -15,7 +15,7 @@ export default function Contact() {
     {
       icon: FaLinkedin,
       title: "LinkedIn",
-      description: "Let's connect professionally",
+      description: "Let&apos;s connect professionally",
       value: "/in/dasunsucharith",
       href: "https://linkedin.com/in/dasunsucharith",
       color: "#00C6AE"
@@ -82,7 +82,7 @@ export default function Contact() {
             className="mb-6"
           >
             <span className="inline-block px-4 py-2 bg-white border-2 border-[#FF5757] text-[#FF5757] rounded-full text-sm font-semibold shadow-sm">
-              💬 Let's Connect
+              💬 Let&apos;s Connect
             </span>
           </motion.div>
 
@@ -106,8 +106,8 @@ export default function Contact() {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            Whether you're looking to automate your marketing, build a stunning website, or boost your search rankings, 
-            I'd love to hear about your project. Let's chat about how we can make your digital goals a reality.
+            Whether you&apos;re looking to automate your marketing, build a stunning website, or boost your search rankings,
+            I&apos;d love to hear about your project. Let&apos;s chat about how we can make your digital goals a reality.
           </motion.p>
         </motion.div>
 
@@ -253,10 +253,10 @@ export default function Contact() {
             
             <div className="relative z-10">
               <h3 className="text-2xl md:text-3xl font-bold mb-4">
-                Let's Make Something Great Together
+                Let&apos;s Make Something Great Together
               </h3>
               <p className="text-lg opacity-90 mb-6 max-w-2xl mx-auto">
-                Ready to transform your digital presence? I'm here to help with web development, 
+                Ready to transform your digital presence? I&apos;m here to help with web development,
                 marketing automation, and SEO strategies that actually work.
               </p>
               <motion.a

@@ -1,28 +1,40 @@
+"use client";
+
 import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
     <motion.section
-      className="flex min-h-screen flex-col items-center justify-center text-center px-4"
+      className="min-h-screen flex flex-col justify-center items-center text-center p-6"
       id="hero"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
     >
-      <motion.h1 className="mb-4 text-5xl font-bold" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.6, delay: 0.1 }}>
-        John Doe
+      <motion.h1
+        className="text-5xl font-bold mb-4"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.6, delay: 0.1 }}
+      >
+        Hi, I’m Dasun Sucharith
       </motion.h1>
-      <motion.p className="mb-8 max-w-xl text-lg" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.6, delay: 0.2 }}>
-        Welcome to my personal website built with Next.js!
+      <motion.p
+        className="text-lg text-gray-600 mb-6 max-w-xl"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+      >
+        Marketing Automation Developer | SEO Strategist | AI Enthusiast — Building clever, fast, and future-ready web experiences.
       </motion.p>
       <motion.a
         href="#projects"
-        className="rounded bg-blue-600 px-6 py-3 font-medium text-white hover:bg-blue-700"
+        className="bg-black text-white px-6 py-3 rounded-full hover:scale-105 transition"
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.3 }}
       >
-        View Projects
+        View My Work
       </motion.a>
     </motion.section>
   );

@@ -1,71 +1,90 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FaArrowDown, FaCode, FaRocket, FaChartLine } from "react-icons/fa";
+import { FaArrowDown, FaCode, FaRocket, FaChartLine, FaBolt, FaCog, FaAtom } from "react-icons/fa";
 
 export default function Hero() {
   return (
     <section
       className="min-h-screen flex flex-col justify-center items-center text-center px-6 relative overflow-hidden"
       id="hero"
-      style={{ background: 'linear-gradient(135deg, #F7F9FC 0%, #ffffff 30%, #F7F9FC 70%, #ffffff 100%)' }}
+      style={{ 
+        background: 'linear-gradient(135deg, #0a0a0a 0%, #1A1A1A 50%, #0a0a0a 100%)'
+      }}
     >
-      {/* Enhanced Background Elements */}
+      {/* Futuristic Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
-        {/* Large gradient orbs */}
+        {/* Animated Grid Pattern */}
         <div 
-          className="absolute top-20 left-10 w-80 h-80 rounded-full opacity-15 blur-3xl animate-pulse-slow"
+          className="absolute inset-0 opacity-10"
+          style={{
+            backgroundImage: `
+              linear-gradient(rgba(93, 85, 241, 0.4) 1px, transparent 1px),
+              linear-gradient(90deg, rgba(93, 85, 241, 0.4) 1px, transparent 1px)
+            `,
+            backgroundSize: '40px 40px'
+          }}
+        ></div>
+        
+        {/* Large rotating gradient orbs */}
+        <motion.div 
+          className="absolute top-20 left-10 w-96 h-96 rounded-full opacity-15 blur-3xl"
           style={{ background: 'linear-gradient(135deg, #5D55F1, #00C6AE)' }}
-        ></div>
-        <div 
-          className="absolute bottom-20 right-10 w-96 h-96 rounded-full opacity-15 blur-3xl animate-pulse-slow"
+          animate={{ 
+            scale: [1, 1.4, 1],
+            rotate: [0, 360]
+          }}
+          transition={{ 
+            duration: 20,
+            repeat: Infinity,
+            ease: "linear"
+          }}
+        ></motion.div>
+        
+        <motion.div 
+          className="absolute bottom-20 right-10 w-[500px] h-[500px] rounded-full opacity-12 blur-3xl"
           style={{ background: 'linear-gradient(135deg, #00C6AE, #FF5757)' }}
-        ></div>
+          animate={{ 
+            scale: [1.2, 1, 1.2],
+            rotate: [360, 0]
+          }}
+          transition={{ 
+            duration: 25,
+            repeat: Infinity,
+            ease: "linear"
+          }}
+        ></motion.div>
         
         {/* Medium floating orbs */}
         <motion.div 
-          className="absolute top-32 right-1/4 w-32 h-32 rounded-full opacity-8 blur-2xl"
+          className="absolute top-32 right-1/4 w-40 h-40 rounded-full opacity-8 blur-2xl"
           style={{ background: 'linear-gradient(135deg, #FF5757, #5D55F1)' }}
-          animate={{ y: [-20, 20, -20], x: [-10, 10, -10] }}
-          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+          animate={{ y: [-30, 30, -30], x: [-15, 15, -15] }}
+          transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
         ></motion.div>
         <motion.div 
-          className="absolute bottom-1/3 left-1/4 w-24 h-24 rounded-full opacity-8 blur-2xl"
+          className="absolute bottom-1/3 left-1/4 w-32 h-32 rounded-full opacity-8 blur-2xl"
           style={{ background: 'linear-gradient(135deg, #00C6AE, #5D55F1)' }}
-          animate={{ y: [15, -15, 15], x: [8, -8, 8] }}
-          transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+          animate={{ y: [25, -25, 25], x: [12, -12, 12] }}
+          transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 3 }}
         ></motion.div>
         
-        {/* Geometric shapes */}
+        {/* Geometric shapes with glow */}
         <motion.div
-          className="absolute top-1/4 left-1/3 w-2 h-2 bg-[#5D55F1] rounded-full opacity-30"
-          animate={{ scale: [1, 1.5, 1], opacity: [0.3, 0.6, 0.3] }}
+          className="absolute top-1/4 left-1/3 w-3 h-3 bg-[#5D55F1] rounded-full opacity-40 shadow-lg shadow-[#5D55F1]/50"
+          animate={{ scale: [1, 2, 1], opacity: [0.4, 0.8, 0.4] }}
           transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
         ></motion.div>
         <motion.div
-          className="absolute top-1/2 right-1/3 w-1 h-1 bg-[#00C6AE] rounded-full opacity-40"
-          animate={{ scale: [1, 2, 1], opacity: [0.4, 0.8, 0.4] }}
+          className="absolute top-1/2 right-1/3 w-2 h-2 bg-[#00C6AE] rounded-full opacity-50 shadow-lg shadow-[#00C6AE]/50"
+          animate={{ scale: [1, 2.5, 1], opacity: [0.5, 1, 0.5] }}
           transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 1 }}
         ></motion.div>
         <motion.div
-          className="absolute bottom-1/3 right-1/4 w-1.5 h-1.5 bg-[#FF5757] rounded-full opacity-35"
-          animate={{ scale: [1, 1.8, 1], opacity: [0.35, 0.7, 0.35] }}
-          transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 3 }}
+          className="absolute bottom-1/3 right-1/4 w-2.5 h-2.5 bg-[#FF5757] rounded-full opacity-45 shadow-lg shadow-[#FF5757]/50"
+          animate={{ scale: [1, 2.2, 1], opacity: [0.45, 0.9, 0.45] }}
+          transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 2 }}
         ></motion.div>
-        
-        {/* Grid pattern overlay */}
-        <div className="absolute inset-0 opacity-5">
-          <div 
-            className="w-full h-full"
-            style={{
-              backgroundImage: `
-                linear-gradient(rgba(93, 85, 241, 0.1) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(93, 85, 241, 0.1) 1px, transparent 1px)
-              `,
-              backgroundSize: '40px 40px'
-            }}
-          ></div>
-        </div>
         
         {/* Animated gradient lines */}
         <motion.div
@@ -96,27 +115,27 @@ export default function Hero() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="mb-4"
           >
-            <span className="inline-block px-4 py-2 bg-white border-2 border-[#5D55F1] text-[#5D55F1] rounded-full text-sm font-semibold shadow-sm">
+            <span className="inline-block px-4 py-2 bg-gradient-to-r from-[#5D55F1] to-[#00C6AE] text-white rounded-full text-sm font-semibold shadow-lg">
               👋 Available for Projects
             </span>
           </motion.div>
 
           <motion.h1
-            className="text-4xl md:text-5xl lg:text-6xl font-bold mb-5 text-[#1A1A1A] leading-tight"
+            className="text-4xl md:text-5xl lg:text-6xl font-bold mb-5 text-white leading-tight"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
           >
             Hi, I'm{" "}
             <span 
-              className="bg-gradient-to-r from-[#5D55F1] to-[#00C6AE] bg-clip-text text-transparent"
+              className="bg-gradient-to-r from-[#5D55F1] via-[#00C6AE] to-[#FF5757] bg-clip-text text-transparent"
             >
               Dasun Sucharith
             </span>
           </motion.h1>
 
           <motion.p
-            className="text-lg md:text-xl text-gray-600 mb-6 max-w-3xl mx-auto leading-relaxed"
+            className="text-lg md:text-xl text-gray-300 mb-6 max-w-3xl mx-auto leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
@@ -137,18 +156,18 @@ export default function Hero() {
         >
           <motion.a
             href="#projects"
-            className="group inline-flex items-center space-x-2 bg-[#5D55F1] text-white px-8 py-4 rounded-full font-semibold hover:bg-[#4a47d1] transition-all duration-300 shadow-lg hover:shadow-xl"
-            whileHover={{ scale: 1.02 }}
+            className="group inline-flex items-center space-x-2 bg-gradient-to-r from-[#5D55F1] to-[#00C6AE] text-white px-8 py-4 rounded-full font-semibold hover:shadow-2xl hover:shadow-[#5D55F1]/25 transition-all duration-500"
+            whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.98 }}
           >
             <span>View My Work</span>
-            <FaArrowDown className="w-4 h-4 group-hover:translate-y-1 transition-transform" />
+            <FaArrowDown className="w-4 h-4 group-hover:translate-y-1 transition-transform duration-500" />
           </motion.a>
           
           <motion.a
             href="/contact"
-            className="inline-flex items-center space-x-2 bg-white text-[#5D55F1] px-8 py-4 rounded-full font-semibold border-2 border-[#5D55F1] hover:bg-[#5D55F1] hover:text-white transition-all duration-300"
-            whileHover={{ scale: 1.02 }}
+            className="inline-flex items-center space-x-2 bg-transparent text-white px-8 py-4 rounded-full font-semibold border-2 border-[#5D55F1] hover:bg-[#5D55F1] hover:shadow-lg hover:shadow-[#5D55F1]/25 transition-all duration-500"
+            whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.98 }}
           >
             <span>Let's Talk</span>
@@ -175,81 +194,81 @@ export default function Hero() {
       {/* Enhanced Floating Elements */}
       <motion.div
         className="absolute top-1/4 left-16 hidden lg:block"
-        animate={{ y: [-10, 10, -10] }}
-        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+        animate={{ y: [-15, 15, -15], rotate: [0, 5, 0] }}
+        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
       >
-        <div className="w-16 h-16 bg-white rounded-2xl shadow-lg flex items-center justify-center border border-gray-100">
+        <div className="w-16 h-16 bg-gradient-to-br from-gray-900/80 to-black/80 backdrop-blur-lg rounded-2xl shadow-lg flex items-center justify-center border border-gray-700 hover:border-[#5D55F1] transition-colors duration-500">
           <span className="text-2xl">🚀</span>
         </div>
       </motion.div>
 
       <motion.div
         className="absolute top-1/3 right-16 hidden lg:block"
-        animate={{ y: [10, -10, 10] }}
-        transition={{ duration: 3, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+        animate={{ y: [12, -12, 12], rotate: [0, -8, 0] }}
+        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 1 }}
       >
-        <div className="w-12 h-12 bg-white rounded-xl shadow-lg flex items-center justify-center border border-gray-100">
+        <div className="w-12 h-12 bg-gradient-to-br from-gray-900/80 to-black/80 backdrop-blur-lg rounded-xl shadow-lg flex items-center justify-center border border-gray-700 hover:border-[#00C6AE] transition-colors duration-500">
           <span className="text-xl">⚡</span>
         </div>
       </motion.div>
 
       <motion.div
         className="absolute bottom-1/4 left-20 hidden lg:block"
-        animate={{ y: [-8, 8, -8] }}
-        transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+        animate={{ y: [-10, 10, -10], rotate: [0, 10, 0] }}
+        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", delay: 2 }}
       >
-        <div className="w-14 h-14 bg-white rounded-xl shadow-lg flex items-center justify-center border border-gray-100">
+        <div className="w-14 h-14 bg-gradient-to-br from-gray-900/80 to-black/80 backdrop-blur-lg rounded-xl shadow-lg flex items-center justify-center border border-gray-700 hover:border-[#FF5757] transition-colors duration-500">
           <span className="text-xl">🎯</span>
         </div>
       </motion.div>
 
-      {/* Additional Floating Elements */}
+      {/* Additional Futuristic Floating Elements */}
       <motion.div
         className="absolute top-20 right-1/4 hidden lg:block"
-        animate={{ y: [-12, 12, -12], x: [-5, 5, -5] }}
-        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
+        animate={{ y: [-18, 18, -18], x: [-8, 8, -8], rotate: [0, 15, 0] }}
+        transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
       >
-        <div className="w-10 h-10 bg-white rounded-lg shadow-md flex items-center justify-center border border-gray-100">
+        <div className="w-10 h-10 bg-gradient-to-br from-gray-900/80 to-black/80 backdrop-blur-lg rounded-lg shadow-md flex items-center justify-center border border-gray-700 hover:border-[#5D55F1] transition-colors duration-500">
           <span className="text-lg">💡</span>
         </div>
       </motion.div>
 
       <motion.div
         className="absolute bottom-20 right-32 hidden lg:block"
-        animate={{ y: [8, -8, 8], rotate: [0, 5, -5, 0] }}
-        transition={{ duration: 4, repeat: Infinity, ease: "easeInOut", delay: 3 }}
+        animate={{ y: [10, -10, 10], rotate: [0, -12, 0], scale: [1, 1.1, 1] }}
+        transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 3 }}
       >
-        <div className="w-12 h-12 bg-white rounded-full shadow-lg flex items-center justify-center border border-gray-100">
+        <div className="w-12 h-12 bg-gradient-to-br from-gray-900/80 to-black/80 backdrop-blur-lg rounded-full shadow-lg flex items-center justify-center border border-gray-700 hover:border-[#00C6AE] transition-colors duration-500">
           <span className="text-lg">📈</span>
         </div>
       </motion.div>
 
       <motion.div
         className="absolute top-1/2 left-12 hidden lg:block"
-        animate={{ y: [-6, 6, -6], x: [0, 3, 0] }}
-        transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 4 }}
+        animate={{ y: [-8, 8, -8], x: [0, 5, 0], rotate: [0, 20, 0] }}
+        transition={{ duration: 9, repeat: Infinity, ease: "easeInOut", delay: 4 }}
       >
-        <div className="w-8 h-8 bg-white rounded-md shadow-md flex items-center justify-center border border-gray-100">
+        <div className="w-8 h-8 bg-gradient-to-br from-gray-900/80 to-black/80 backdrop-blur-lg rounded-md shadow-md flex items-center justify-center border border-gray-700 hover:border-[#FF5757] transition-colors duration-500">
           <span className="text-sm">🔥</span>
         </div>
       </motion.div>
 
       <motion.div
         className="absolute bottom-1/3 right-20 hidden lg:block"
-        animate={{ y: [15, -15, 15], rotate: [0, -10, 10, 0] }}
-        transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
+        animate={{ y: [20, -20, 20], rotate: [0, -15, 15, 0], scale: [1, 1.15, 1] }}
+        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
       >
-        <div className="w-10 h-10 bg-white rounded-xl shadow-lg flex items-center justify-center border border-gray-100">
+        <div className="w-10 h-10 bg-gradient-to-br from-gray-900/80 to-black/80 backdrop-blur-lg rounded-xl shadow-lg flex items-center justify-center border border-gray-700 hover:border-[#5D55F1] transition-colors duration-500">
           <span className="text-lg">🤖</span>
         </div>
       </motion.div>
 
       <motion.div
         className="absolute top-2/3 left-1/3 hidden lg:block"
-        animate={{ y: [-10, 10, -10], scale: [1, 1.1, 1] }}
-        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", delay: 2.5 }}
+        animate={{ y: [-12, 12, -12], scale: [1, 1.3, 1], rotate: [0, 25, 0] }}
+        transition={{ duration: 10, repeat: Infinity, ease: "easeInOut", delay: 2.5 }}
       >
-        <div className="w-6 h-6 bg-white rounded-full shadow-sm flex items-center justify-center border border-gray-100">
+        <div className="w-6 h-6 bg-gradient-to-br from-gray-900/80 to-black/80 backdrop-blur-lg rounded-full shadow-sm flex items-center justify-center border border-gray-700 hover:border-[#00C6AE] transition-colors duration-500">
           <span className="text-xs">✨</span>
         </div>
       </motion.div>

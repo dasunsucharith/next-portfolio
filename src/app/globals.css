@@ -1,8 +1,15 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #F7F9FC;
+  --foreground: #1A1A1A;
+  
+  /* Brand Colors */
+  --electric-indigo: #5D55F1;
+  --vibrant-teal: #00C6AE;
+  --sunset-coral: #FF5757;
+  --deep-charcoal: #1A1A1A;
+  --soft-ice: #F7F9FC;
 }
 
 @theme inline {
@@ -24,4 +31,46 @@ body {
   color: var(--foreground);
   scroll-behavior: smooth;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--soft-ice);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, var(--electric-indigo), var(--vibrant-teal));
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, var(--vibrant-teal), var(--electric-indigo));
+}
+
+/* Smooth transitions for all interactive elements */
+* {
+  transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+/* Custom selection colors */
+::selection {
+  background: var(--electric-indigo);
+  color: white;
+}
+
+/* Enhanced focus states */
+*:focus {
+  outline: 2px solid var(--electric-indigo);
+  outline-offset: 2px;
+}
+
+/* Smooth anchor scrolling */
+html {
+  scroll-padding-top: 80px;
 }

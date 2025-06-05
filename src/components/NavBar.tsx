@@ -20,9 +20,9 @@ export default function NavBar() {
             </a>
           </li>
           <li>
-            <a href="#contact" className="flex items-center hover:text-blue-600">
+            <Link href="/contact" className="flex items-center hover:text-blue-600">
               <FaEnvelope className="mr-1" /> Contact
-            </a>
+            </Link>
           </li>
         </ul>
       </div>

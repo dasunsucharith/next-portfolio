@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { FaArrowDown, FaCode, FaRocket, FaChartLine, FaBolt, FaCog, FaAtom } from "react-icons/fa";
+import { FaArrowDown } from "react-icons/fa";
 
 export default function Hero() {
   return (
@@ -126,7 +126,7 @@ export default function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
           >
-            Hi, I'm{" "}
+            Hi, I&apos;m{" "}
             <span 
               className="bg-gradient-to-r from-[#5D55F1] via-[#00C6AE] to-[#FF5757] bg-clip-text text-transparent"
             >
@@ -170,7 +170,7 @@ export default function Hero() {
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.98 }}
           >
-            <span>Let's Talk</span>
+            <span>Let&apos;s Talk</span>
           </motion.a>
         </motion.div>
 

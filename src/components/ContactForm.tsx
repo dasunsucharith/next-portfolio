@@ -34,13 +34,14 @@ export default function ContactForm() {
         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID || '',
         process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID || '',
         form.current,
-        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
+        process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY || ''
       );
       
       setSubmitStatus('success');
       setFormData({ user_name: '', user_email: '', subject: '', message: '' });
       form.current?.reset();
     } catch (error) {
+      console.error(error);
       setSubmitStatus('error');
     } finally {
       setIsSubmitting(false);
@@ -114,7 +115,7 @@ export default function ContactForm() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
           >
-            Let's Start a{" "}
+            Let&apos;s Start a{" "}
             <span className="bg-gradient-to-r from-[#5D55F1] to-[#00C6AE] bg-clip-text text-transparent">
               Conversation
             </span>
@@ -126,7 +127,7 @@ export default function ContactForm() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            Ready to bring your digital vision to life? Share your project details and I'll get back to you within 24 hours.
+            Ready to bring your digital vision to life? Share your project details and I&apos;ll get back to you within 24 hours.
           </motion.p>
         </motion.div>
 
@@ -337,7 +338,7 @@ export default function ContactForm() {
                     <FaCheckCircle className="w-5 h-5 text-green-500" />
                     <div>
                       <p className="font-medium text-green-800">Message sent successfully!</p>
-                      <p className="text-sm text-green-600">I'll get back to you within 24 hours.</p>
+                      <p className="text-sm text-green-600">I&apos;ll get back to you within 24 hours.</p>
                     </div>
                   </motion.div>
                 )}
@@ -383,7 +384,7 @@ export default function ContactForm() {
                 Prefer to skip the form?
               </h3>
               <p className="text-lg opacity-90 mb-6">
-                Send me an email directly and I'll respond as soon as possible.
+                Send me an email directly and I&apos;ll respond as soon as possible.
               </p>
               <a
                 href="mailto:dasun@example.com"

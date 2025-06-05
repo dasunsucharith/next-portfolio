@@ -5,16 +5,21 @@ import { motion } from "framer-motion";
 import { FaUser, FaCode, FaEnvelope, FaHome } from "react-icons/fa";
 import { useState, useEffect } from "react";
 
-export default function NavBar() {
-  const [isScrolled, setIsScrolled] = useState(false);
+export default function NavBar({ alwaysScrolled = false }: { alwaysScrolled?: boolean } = {}) {
+  const [isScrolled, setIsScrolled] = useState(alwaysScrolled);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      if (alwaysScrolled) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(window.scrollY > 50);
+      }
     };
+    handleScroll();
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [alwaysScrolled]);
 
   const navItems = [
     { href: "/", label: "Home", icon: FaHome },

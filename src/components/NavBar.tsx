@@ -37,21 +37,19 @@ export default function NavBar() {
         {/* Logo/Brand */}
         <motion.div
           className="flex items-center space-x-2"
-          whileHover={{ scale: 1.05 }}
           transition={{ type: "spring", stiffness: 400, damping: 25 }}
         >
           <Link href="/" className="group flex items-center space-x-3">
             <div className="relative">
-              <div className="w-10 h-10 bg-gradient-to-br from-electric-indigo to-vibrant-teal rounded-xl flex items-center justify-center font-bold text-white text-lg shadow-lg">
-                DS
+              <div className="w-10 h-10 bg-white border-2 border-[#5D55F1] rounded-xl flex items-center justify-center font-bold text-[#5D55F1] text-lg hover:bg-[#5D55F1] hover:text-white transition-all duration-300 ease-out">
+                <span>DS</span>
               </div>
-              <div className="absolute -inset-1 bg-gradient-to-br from-electric-indigo to-vibrant-teal rounded-xl blur opacity-30 group-hover:opacity-50 transition-opacity"></div>
             </div>
             <div className="hidden sm:block">
-              <h1 className="text-xl font-bold text-deep-charcoal group-hover:text-electric-indigo transition-colors">
+              <h1 className="text-xl font-bold text-[#1A1A1A] group-hover:text-[#5D55F1] transition-colors duration-300 ease-out">
                 Dasun Sucharith
               </h1>
-              <p className="text-xs text-gray-600 font-medium">Marketing Automation Dev</p>
+              <p className="text-xs text-gray-600 font-medium transition-colors duration-300 ease-out">Marketing Automation Dev</p>
             </div>
           </Link>
         </motion.div>
@@ -85,17 +83,13 @@ export default function NavBar() {
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.5 }}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
           >
             <Link 
               href="/contact"
-              className="group relative inline-flex items-center space-x-2 bg-gradient-to-r from-electric-indigo to-vibrant-teal text-white px-6 py-2.5 rounded-full font-medium text-sm shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden"
+              className="group relative inline-flex items-center space-x-2 bg-white text-[#5D55F1] px-6 py-2.5 rounded-full font-semibold text-sm border-2 border-[#5D55F1] hover:bg-[#5D55F1] hover:text-white transition-all duration-300 ease-out"
             >
-              <div className="absolute inset-0 bg-gradient-to-r from-vibrant-teal to-electric-indigo opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              <FaEnvelope className="w-4 h-4 relative z-10 transition-transform group-hover:rotate-12" />
-              <span className="relative z-10">Contact Me</span>
-              <div className="absolute inset-0 bg-white/20 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+              <FaEnvelope className="w-4 h-4" />
+              <span>Contact</span>
             </Link>
           </motion.div>
 
